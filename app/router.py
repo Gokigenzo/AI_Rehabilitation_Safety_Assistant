@@ -96,21 +96,21 @@ class DashboardRouter:
         msg = QMessageBox(self.window)
         msg.setWindowTitle("Kết Quả Đánh Giá Phục Hồi Chức Năng")
         msg.setText(f"""
-            <div style='color: #FFFFFF; font-size: 14px; line-height: 1.6; padding: 4px;'>
-                <h3 style='color: #00E5FA; margin-top: 0;'>BÁO CÁO PHIÊN TẬP PHỤC HỒI CHỨC NĂNG</h3>
+            <div style='color: #FFFFFF; font-size: 16px; line-height: 1.7; padding: 8px;'>
+                <h3 style='color: #00E5FA; font-size: 19px; margin-top: 0;'>BÁO CÁO PHIÊN TẬP PHỤC HỒI CHỨC NĂNG</h3>
                 • <b>Người tập:</b> {user_name}<br>
                 • <b>Bài tập:</b> <span style='color: #00E5FA;'>{ex_name}</span><br>
                 • <b>Tổng số lần hoàn thành:</b> <b>{reps} / {target} lần</b><br>
                 • <b>Động tác chuẩn:</b> <span style='color: #10B981;'>{correct}</span>  |  <b>Chưa chuẩn:</b> <span style='color: #EF4444;'>{incorrect}</span><br>
-                • <b>Điểm kỹ thuật động tác (Score):</b> <span style='font-size: 18px; font-weight: bold; color: {'#10B981' if score >= 80 else '#F59E0B'};'>{score}%</span><br>
+                • <b>Điểm kỹ thuật động tác (Score):</b> <span style='font-size: 22px; font-weight: 800; color: {'#10B981' if score >= 80 else '#F59E0B'};'>{score}%</span><br>
                 • <b>Nhận xét chuyên môn:</b> {rating}
             </div>
         """)
         msg.setIcon(QMessageBox.Information)
         msg.setStyleSheet("""
-            QMessageBox { background-color: #1A1D24; border: 1px solid #2D3342; border-radius: 8px; }
-            QLabel { color: #FFFFFF !important; background-color: transparent; }
-            QPushButton { background-color: #00C4D6; color: #000000 !important; font-weight: bold; border-radius: 6px; padding: 8px 24px; min-width: 90px; }
+            QMessageBox { background-color: #1A1D24; border: 1.5px solid #2D3342; border-radius: 10px; }
+            QLabel { color: #FFFFFF !important; background-color: transparent; font-size: 16px; }
+            QPushButton { background-color: #00C4D6; color: #000000 !important; font-size: 15px; font-weight: bold; border-radius: 8px; padding: 10px 28px; min-width: 120px; min-height: 40px; }
             QPushButton:hover { background-color: #00E5FA; }
         """)
         msg.exec_()

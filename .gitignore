@@ -35,6 +35,8 @@ data/fall_events/*
 !data/fall_events/.gitkeep
 data/sessions/*
 !data/sessions/.gitkeep
+shared/data/registered_faces/*
+!shared/data/registered_faces/.gitkeep
 
 # IDE and OS files
 .vscode/

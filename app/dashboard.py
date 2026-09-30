@@ -65,66 +65,69 @@ QMainWindow {
 }
 QWidget {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
     color: #F1F5F9;
 }
 
 /* Header Bar */
 #HeaderBar {
     background-color: #12151C;
-    border-bottom: 1px solid #1E232E;
-    padding: 6px 16px;
+    border-bottom: 1.5px solid #1E232E;
+    padding: 10px 20px;
 }
 #BrandTitle {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 800;
     color: #00E5FA;
     letter-spacing: 0.5px;
 }
 #Subtitle {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
     color: #94A3B8;
 }
 
 /* Standard Cards */
 QFrame.ui-card {
     background-color: #161920;
-    border: 1px solid #252A36;
-    border-radius: 8px;
-    padding: 10px;
+    border: 1.5px solid #252A36;
+    border-radius: 10px;
+    padding: 12px 16px;
 }
 QFrame.ui-card-highlight {
     background-color: #161920;
-    border: 1.5px solid #00C4D6;
-    border-radius: 8px;
-    padding: 10px;
+    border: 2px solid #00C4D6;
+    border-radius: 10px;
+    padding: 12px 16px;
 }
 
 /* Card Titles and Text */
 QLabel.card-title {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: #F8FAFC;
 }
 QLabel.card-value {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     color: #00E5FA;
 }
 QLabel.card-subtext {
-    font-size: 12px;
+    font-size: 14px;
     color: #94A3B8;
+    line-height: 1.4;
 }
 
 /* Action Buttons */
 QPushButton.btn-cyan {
     background-color: #00C4D6;
     color: #000000;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
-    min-height: 32px;
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 40px;
 }
 QPushButton.btn-cyan:hover {
     background-color: #00E5FA;
@@ -132,12 +135,12 @@ QPushButton.btn-cyan:hover {
 QPushButton.btn-green {
     background-color: #10B981;
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
-    min-height: 32px;
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 42px;
 }
 QPushButton.btn-green:hover {
     background-color: #059669;
@@ -145,25 +148,26 @@ QPushButton.btn-green:hover {
 QPushButton.btn-red {
     background-color: #EF4444;
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
-    min-height: 32px;
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 42px;
 }
 QPushButton.btn-red:hover {
     background-color: #DC2626;
 }
 QPushButton.btn-exercise {
     background-color: #1A1D26;
-    color: #CBD5E1;
-    border: 1px solid #2E3545;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 13px;
+    color: #E2E8F0;
+    border: 1.5px solid #2E3545;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
     font-weight: 600;
     text-align: left;
+    min-height: 46px;
 }
 QPushButton.btn-exercise:hover {
     background-color: #242938;
@@ -173,12 +177,13 @@ QPushButton.btn-exercise:hover {
 QPushButton.btn-exercise-active {
     background-color: #0E2A38;
     color: #00E5FA;
-    border: 1.5px solid #00E5FA;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 13px;
+    border: 2px solid #00E5FA;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
     font-weight: 700;
     text-align: left;
+    min-height: 46px;
 }
 
 /* Quick command pills */
@@ -186,9 +191,11 @@ QPushButton.btn-pill {
     background-color: #181C26;
     color: #94A3B8;
     border: 1px solid #282E3E;
-    border-radius: 12px;
-    padding: 4px 10px;
-    font-size: 11px;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 36px;
 }
 QPushButton.btn-pill:hover {
     background-color: #252D3D;
@@ -199,45 +206,48 @@ QPushButton.btn-pill:hover {
 /* Inputs */
 QLineEdit {
     background-color: #0F1217;
-    border: 1px solid #2D3342;
-    border-radius: 6px;
+    border: 1.5px solid #2D3342;
+    border-radius: 8px;
     color: #FFFFFF;
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 8px 14px;
+    font-size: 15px;
+    min-height: 36px;
 }
 QLineEdit:focus {
-    border: 1px solid #00C4D6;
+    border: 1.5px solid #00C4D6;
 }
 
 /* Progress Bar */
 QProgressBar {
     background-color: #141720;
     border: 1px solid #272D3B;
-    border-radius: 5px;
+    border-radius: 6px;
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 12px;
-    height: 18px;
+    font-size: 14px;
+    min-height: 24px;
+    height: 24px;
 }
 QProgressBar::chunk {
     background-color: #00C4D6;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 /* Video viewport */
 #VideoContainer {
     background-color: #000000;
-    border: 1px solid #252A36;
-    border-radius: 8px;
+    border: 1.5px solid #252A36;
+    border-radius: 10px;
 }
 
 /* Bottom Status Bar */
 #BottomStatusBar {
     background-color: #0A0C10;
-    border-top: 1px solid #1E232E;
-    padding: 6px 16px;
-    font-size: 12px;
+    border-top: 1.5px solid #1E232E;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
     color: #94A3B8;
 }
 """
@@ -297,13 +307,13 @@ class DashboardWindow(QMainWindow):
         header = QFrame()
         header.setObjectName("HeaderBar")
         lay_header = QHBoxLayout(header)
-        lay_header.setContentsMargins(16, 8, 16, 8)
+        lay_header.setContentsMargins(20, 10, 20, 10)
 
         # Logo / Title
         v_title = QVBoxLayout()
-        lbl_brand = QLabel("AI REHABILITATION ASSISTANT")
+        lbl_brand = QLabel("AI REHABILITATION & SAFETY ASSISTANT")
         lbl_brand.setObjectName("BrandTitle")
-        lbl_sub = QLabel("Hệ Thống Trợ Lý Phục Hồi Chức Năng Ứng Dụng Thị Giác Máy Tính & Tương Tác Giọng Nói")
+        lbl_sub = QLabel("Hệ Thống Trợ Lý Phục Hồi Chức Năng & Giám Sát An Toàn Thông Minh")
         lbl_sub.setObjectName("Subtitle")
         v_title.addWidget(lbl_brand)
         v_title.addWidget(lbl_sub)
@@ -313,13 +323,13 @@ class DashboardWindow(QMainWindow):
 
         # Telemetry / Clock
         self.lbl_clock = QLabel(datetime.now().strftime("%H:%M:%S | %d/%m/%Y"))
-        self.lbl_clock.setStyleSheet("font-size: 13px; font-weight: bold; color: #CBD5E1;")
+        self.lbl_clock.setStyleSheet("font-size: 15px; font-weight: bold; color: #CBD5E1;")
 
         self.lbl_cam_badge = QLabel("● Camera: Hoạt động (30 FPS)")
         self.lbl_cam_badge.setStyleSheet(
-            "font-size: 12px; color: #10B981; font-weight: 600; "
-            "background-color: #121E24; border: 1px solid #10B981; "
-            "border-radius: 6px; padding: 4px 10px;"
+            "font-size: 14px; color: #10B981; font-weight: 600; "
+            "background-color: #121E24; border: 1.5px solid #10B981; "
+            "border-radius: 8px; padding: 6px 14px;"
         )
 
         lay_header.addWidget(self.lbl_clock)
@@ -328,24 +338,24 @@ class DashboardWindow(QMainWindow):
 
         # 2. MAIN SPLITTER BODY
         splitter = QSplitter(Qt.Horizontal)
-        splitter.setHandleWidth(4)
+        splitter.setHandleWidth(6)
 
-        # ==================== LEFT COLUMN: TELEMETRY & VIEWPORT (65%) ====================
+        # ==================== LEFT COLUMN: TELEMETRY & VIEWPORT (62%) ====================
         left_widget = QWidget()
         left_layout = QVBoxLayout(left_widget)
-        left_layout.setContentsMargins(14, 12, 8, 12)
-        left_layout.setSpacing(10)
+        left_layout.setContentsMargins(16, 12, 10, 12)
+        left_layout.setSpacing(12)
 
         # Top Context Cards: [Cá nhân hóa] & [Trạng thái cảm xúc]
         top_cards = QHBoxLayout()
-        top_cards.setSpacing(10)
+        top_cards.setSpacing(12)
 
         # Card: Nhận diện khuôn mặt & Danh tính (Decoupled Face Recognition)
         card_user = QFrame()
         card_user.setProperty("class", "ui-card")
         lay_card_user = QVBoxLayout(card_user)
-        lay_card_user.setContentsMargins(12, 8, 12, 8)
-        lay_card_user.setSpacing(4)
+        lay_card_user.setContentsMargins(14, 10, 14, 10)
+        lay_card_user.setSpacing(6)
 
         top_u_row = QHBoxLayout()
         lbl_u_title = QLabel("👤 NHẬN DIỆN KHUÔN MẶT & DANH TÍNH")
@@ -368,10 +378,10 @@ class DashboardWindow(QMainWindow):
         lay_card_user.addLayout(top_u_row)
 
         self.lbl_face_status = QLabel("🟢 Đang quét nhận diện khuôn mặt...")
-        self.lbl_face_status.setProperty("class", "card-value")
+        self.lbl_face_status.setStyleSheet("font-size: 17px; font-weight: bold; color: #10B981;")
 
         self.lbl_face_sub = QLabel("Tự động nhận diện người dùng đã đăng ký trong cơ sở dữ liệu.")
-        self.lbl_face_sub.setProperty("class", "card-subtext")
+        self.lbl_face_sub.setStyleSheet("font-size: 14px; color: #94A3B8;")
 
         lay_card_user.addWidget(self.lbl_face_status)
         lay_card_user.addWidget(self.lbl_face_sub)
@@ -381,16 +391,17 @@ class DashboardWindow(QMainWindow):
         card_emo = QFrame()
         card_emo.setProperty("class", "ui-card")
         lay_card_emo = QVBoxLayout(card_emo)
-        lay_card_emo.setContentsMargins(10, 8, 10, 8)
+        lay_card_emo.setContentsMargins(14, 10, 14, 10)
+        lay_card_emo.setSpacing(6)
 
         lbl_e_title = QLabel("😊 Ngữ Cảnh Tâm Lý (Emotion Recognition)")
         lbl_e_title.setProperty("class", "card-title")
 
         self.lbl_current_emotion = QLabel("Trạng thái: Vui vẻ (92.4%)")
-        self.lbl_current_emotion.setProperty("class", "card-value")
+        self.lbl_current_emotion.setStyleSheet("font-size: 17px; font-weight: bold; color: #00E5FA;")
 
         self.lbl_emotion_note = QLabel("Tâm lý tích cực, sẵn sàng cho phiên tập phục hồi.")
-        self.lbl_emotion_note.setProperty("class", "card-subtext")
+        self.lbl_emotion_note.setStyleSheet("font-size: 14px; color: #94A3B8;")
 
         lay_card_emo.addWidget(lbl_e_title)
         lay_card_emo.addWidget(self.lbl_current_emotion)
@@ -403,11 +414,11 @@ class DashboardWindow(QMainWindow):
         self.video_container = QFrame()
         self.video_container.setObjectName("VideoContainer")
         lay_vid = QVBoxLayout(self.video_container)
-        lay_vid.setContentsMargins(2, 2, 2, 2)
+        lay_vid.setContentsMargins(4, 4, 4, 4)
 
         self.video_display = QLabel()
         self.video_display.setAlignment(Qt.AlignCenter)
-        self.video_display.setMinimumSize(540, 360)
+        self.video_display.setMinimumSize(640, 420)
         self.video_display.setSizePolicy(self.video_display.sizePolicy().Expanding, self.video_display.sizePolicy().Expanding)
         self.video_display.setScaledContents(True)
         lay_vid.addWidget(self.video_display)
@@ -417,28 +428,29 @@ class DashboardWindow(QMainWindow):
         # Live Form Guidance Banner
         self.banner_guidance = QLabel("💡 Hướng dẫn: Đứng trước camera, thẳng người và giữ khoảng cách 1.5m - 2.5m.")
         self.banner_guidance.setStyleSheet(
-            "font-size: 13px; font-weight: 600; color: #F59E0B; "
-            "background-color: #1C1917; border: 1px solid #78350F; "
-            "border-radius: 6px; padding: 8px 12px;"
+            "font-size: 16px; font-weight: 600; color: #F59E0B; "
+            "background-color: #1C1917; border: 1.5px solid #78350F; "
+            "border-radius: 8px; padding: 12px 18px;"
         )
         left_layout.addWidget(self.banner_guidance)
 
         splitter.addWidget(left_widget)
 
-        # ==================== RIGHT COLUMN: REHABILITATION & VOICE (35%) ====================
+        # ==================== RIGHT COLUMN: REHABILITATION & SAFETY (38%) ====================
         right_widget = QWidget()
+        right_widget.setMinimumWidth(440)
         right_layout = QVBoxLayout(right_widget)
-        right_layout.setContentsMargins(8, 12, 14, 12)
-        right_layout.setSpacing(12)
+        right_layout.setContentsMargins(10, 12, 16, 12)
+        right_layout.setSpacing(14)
 
         # 1. Exercise Selection Card
         card_ex = QFrame()
         card_ex.setProperty("class", "ui-card-highlight")
         lay_card_ex = QVBoxLayout(card_ex)
-        lay_card_ex.setSpacing(8)
+        lay_card_ex.setSpacing(10)
 
         lbl_ex_title = QLabel("🏋️ CHỌN BÀI TẬP PHỤC HỒI CHỨC NĂNG")
-        lbl_ex_title.setStyleSheet("font-size: 14px; font-weight: bold; color: #00E5FA;")
+        lbl_ex_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #00E5FA;")
         lay_card_ex.addWidget(lbl_ex_title)
 
         # Exercise Options
@@ -483,15 +495,15 @@ class DashboardWindow(QMainWindow):
         card_eval = QFrame()
         card_eval.setProperty("class", "ui-card")
         lay_eval = QVBoxLayout(card_eval)
-        lay_eval.setSpacing(8)
+        lay_eval.setSpacing(10)
 
         lbl_eval_title = QLabel("📊 ĐÁNH GIÁ CHUYÊN MÔN & ĐIỂM SỐ")
-        lbl_eval_title.setProperty("class", "card-title")
+        lbl_eval_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #F8FAFC;")
         lay_eval.addWidget(lbl_eval_title)
 
         # Progress bar
         self.lbl_progress = QLabel("Tiến độ: 0 / 12 lần hoàn thành (0%)")
-        self.lbl_progress.setStyleSheet("font-size: 13px; color: #CBD5E1; font-weight: 600;")
+        self.lbl_progress.setStyleSheet("font-size: 15px; color: #CBD5E1; font-weight: 600;")
         self.progress_bar = QProgressBar()
         self.progress_bar.setRange(0, 100)
         self.progress_bar.setValue(0)
@@ -501,13 +513,13 @@ class DashboardWindow(QMainWindow):
         # Metrics row
         metrics_row = QHBoxLayout()
         self.lbl_correct_cnt = QLabel("Đúng: 0")
-        self.lbl_correct_cnt.setStyleSheet("font-size: 13px; font-weight: bold; color: #10B981;")
+        self.lbl_correct_cnt.setStyleSheet("font-size: 16px; font-weight: bold; color: #10B981;")
 
         self.lbl_incorrect_cnt = QLabel("Chưa chuẩn: 0")
-        self.lbl_incorrect_cnt.setStyleSheet("font-size: 13px; font-weight: bold; color: #EF4444;")
+        self.lbl_incorrect_cnt.setStyleSheet("font-size: 16px; font-weight: bold; color: #EF4444;")
 
         self.lbl_score_val = QLabel("Điểm: 100.0%")
-        self.lbl_score_val.setStyleSheet("font-size: 15px; font-weight: 800; color: #00E5FA;")
+        self.lbl_score_val.setStyleSheet("font-size: 20px; font-weight: 800; color: #00E5FA;")
 
         metrics_row.addWidget(self.lbl_correct_cnt)
         metrics_row.addWidget(self.lbl_incorrect_cnt)
@@ -527,42 +539,45 @@ class DashboardWindow(QMainWindow):
         card_safety = QFrame()
         card_safety.setProperty("class", "ui-card")
         lay_safety = QVBoxLayout(card_safety)
-        lay_safety.setSpacing(8)
+        lay_safety.setSpacing(10)
 
         lbl_s_title = QLabel("🛡️ GIÁM SÁT AN TOÀN & TÉ NGÃ")
-        lbl_s_title.setProperty("class", "card-title")
+        lbl_s_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #F8FAFC;")
         lay_safety.addWidget(lbl_s_title)
 
         self.lbl_safety_monitor_badge = QLabel("● ĐANG GIÁM SÁT LIÊN TỤC")
         self.lbl_safety_monitor_badge.setStyleSheet(
-            "font-size: 12px; font-weight: bold; color: #10B981; "
-            "background-color: #0E241B; border: 1px solid #059669; "
-            "border-radius: 6px; padding: 4px 8px;"
+            "font-size: 14px; font-weight: bold; color: #10B981; "
+            "background-color: #0E241B; border: 1.5px solid #059669; "
+            "border-radius: 8px; padding: 6px 14px;"
         )
         lay_safety.addWidget(self.lbl_safety_monitor_badge)
 
         self.lbl_fall_status = QLabel("Trạng thái:\n✓ Bình thường")
-        self.lbl_fall_status.setStyleSheet("font-size: 13px; font-weight: bold; color: #10B981;")
+        self.lbl_fall_status.setStyleSheet("font-size: 16px; font-weight: bold; color: #10B981;")
         lay_safety.addWidget(self.lbl_fall_status)
 
         self.lbl_caregiver_email = QLabel("Người nhận:\nChưa cấu hình Gmail")
-        self.lbl_caregiver_email.setStyleSheet("font-size: 12px; color: #94A3B8;")
+        self.lbl_caregiver_email.setStyleSheet("font-size: 14px; color: #94A3B8;")
         self.lbl_caregiver_email.setWordWrap(True)
         lay_safety.addWidget(self.lbl_caregiver_email)
 
         self.lbl_last_fall_event = QLabel("Sự kiện gần nhất: Không có")
-        self.lbl_last_fall_event.setStyleSheet("font-size: 12px; color: #CBD5E1;")
+        self.lbl_last_fall_event.setStyleSheet("font-size: 14px; color: #CBD5E1;")
         self.lbl_last_fall_event.setWordWrap(True)
         lay_safety.addWidget(self.lbl_last_fall_event)
 
         self.lbl_email_status = QLabel("Gmail: ✓ Ready")
-        self.lbl_email_status.setStyleSheet("font-size: 12px; color: #38BDF8; font-weight: 600;")
+        self.lbl_email_status.setStyleSheet("font-size: 15px; color: #38BDF8; font-weight: 600;")
         lay_safety.addWidget(self.lbl_email_status)
 
         right_layout.addWidget(card_safety)
         right_layout.addStretch()
 
         splitter.addWidget(right_widget)
+        splitter.setStretchFactor(0, 6)
+        splitter.setStretchFactor(1, 4)
+        splitter.setSizes([680, 460])
         root_layout.addWidget(splitter, 1)
 
         # 3. BOTTOM STATUS BAR
@@ -686,18 +701,18 @@ class DashboardWindow(QMainWindow):
             age = profile.get("age", 70)
             gender = profile.get("gender", "Nam")
             self.lbl_face_status.setText(f"🟢 Đã nhận diện: {r_name} (Mã: {r_id}, {age} tuổi - {gender})")
-            self.lbl_face_status.setStyleSheet("font-size: 14px; font-weight: bold; color: #10B981;")
+            self.lbl_face_status.setStyleSheet("font-size: 17px; font-weight: bold; color: #10B981;")
             self.lbl_face_sub.setText(f"Độ tin cậy: {r_conf * 100:.1f}% | Hồ sơ: Đã xác thực")
             self.current_patient_id = r_id
             self.current_patient_name = r_name
             self.router.update_recognized_user(r_id, r_name)
         elif f_status == "unknown":
             self.lbl_face_status.setText("🟠 Phát hiện người lạ (Chưa đăng ký)")
-            self.lbl_face_status.setStyleSheet("font-size: 14px; font-weight: bold; color: #F59E0B;")
+            self.lbl_face_status.setStyleSheet("font-size: 17px; font-weight: bold; color: #F59E0B;")
             self.lbl_face_sub.setText("Chưa có hồ sơ trong CSDL. Bấm [➕ Đăng Ký Người Mới] để điền thông tin và chụp ảnh.")
         else:
             self.lbl_face_status.setText("⚪ Chưa phát hiện khuôn mặt")
-            self.lbl_face_status.setStyleSheet("font-size: 14px; font-weight: bold; color: #94A3B8;")
+            self.lbl_face_status.setStyleSheet("font-size: 17px; font-weight: bold; color: #94A3B8;")
             self.lbl_face_sub.setText("Vui lòng nhìn thẳng vào camera, hoặc bấm [➕ Đăng Ký Người Mới] để thêm hồ sơ.")
 
         # 2. Rehabilitation Metrics
@@ -729,16 +744,16 @@ class DashboardWindow(QMainWindow):
 
         if fall_st == "NORMAL":
             self.lbl_fall_status.setText("Trạng thái:\n✓ Bình thường")
-            self.lbl_fall_status.setStyleSheet("font-size: 13px; font-weight: bold; color: #10B981;")
+            self.lbl_fall_status.setStyleSheet("font-size: 16px; font-weight: bold; color: #10B981;")
         elif fall_st in ("SUSPECTED", "CONFIRMING"):
             self.lbl_fall_status.setText(f"Trạng thái:\n🟠 Nghi ngờ ngã — đang xác nhận ({fall_conf*100:.0f}%)")
-            self.lbl_fall_status.setStyleSheet("font-size: 13px; font-weight: bold; color: #F59E0B;")
+            self.lbl_fall_status.setStyleSheet("font-size: 16px; font-weight: bold; color: #F59E0B;")
         elif fall_st == "FALL_CONFIRMED":
             self.lbl_fall_status.setText("Trạng thái:\n🔴 Phát hiện dấu hiệu ngã!")
-            self.lbl_fall_status.setStyleSheet("font-size: 13px; font-weight: bold; color: #EF4444;")
+            self.lbl_fall_status.setStyleSheet("font-size: 16px; font-weight: bold; color: #EF4444;")
         elif fall_st == "COOLDOWN":
             self.lbl_fall_status.setText("Trạng thái:\n⏱️ Đang phục hồi sau sự kiện (Cooldown)")
-            self.lbl_fall_status.setStyleSheet("font-size: 13px; font-weight: bold; color: #38BDF8;")
+            self.lbl_fall_status.setStyleSheet("font-size: 16px; font-weight: bold; color: #38BDF8;")
 
         caregiver_em = app_state.get("caregiver_email") or profile.get("caregiver", {}).get("email", "")
         if caregiver_em:

@@ -45,24 +45,26 @@ QDialog {
     background-color: #0F1218;
     color: #F8FAFC;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
 }
 QLabel {
     color: #E2E8F0;
+    font-size: 14px;
 }
 QLabel.section-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: #00E5FA;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 QLineEdit, QSpinBox, QComboBox {
     background-color: #171B24;
     border: 1.5px solid #2D3342;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #FFFFFF;
-    padding: 8px 12px;
-    font-size: 13px;
-    min-height: 22px;
+    padding: 8px 14px;
+    font-size: 15px;
+    min-height: 36px;
 }
 QLineEdit:focus, QSpinBox:focus, QComboBox:focus {
     border: 1.5px solid #00E5FA;
@@ -71,12 +73,12 @@ QLineEdit:focus, QSpinBox:focus, QComboBox:focus {
 QPushButton.btn-primary {
     background-color: #10B981;
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
-    border-radius: 6px;
-    padding: 10px 20px;
-    min-height: 24px;
+    border-radius: 8px;
+    padding: 10px 22px;
+    min-height: 42px;
 }
 QPushButton.btn-primary:hover {
     background-color: #059669;
@@ -84,12 +86,12 @@ QPushButton.btn-primary:hover {
 QPushButton.btn-capture {
     background-color: #00C4D6;
     color: #000000;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
-    border-radius: 6px;
-    padding: 9px 16px;
-    min-height: 22px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    min-height: 42px;
 }
 QPushButton.btn-capture:hover {
     background-color: #00E5FA;
@@ -97,11 +99,12 @@ QPushButton.btn-capture:hover {
 QPushButton.btn-secondary {
     background-color: #242938;
     color: #CBD5E1;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     border: 1px solid #333C4E;
-    border-radius: 6px;
-    padding: 9px 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    min-height: 42px;
 }
 QPushButton.btn-secondary:hover {
     background-color: #2E3547;
@@ -110,27 +113,29 @@ QPushButton.btn-secondary:hover {
 QPushButton.btn-danger {
     background-color: #EF4444;
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 38px;
 }
 QPushButton.btn-danger:hover {
     background-color: #DC2626;
 }
 QFrame.card {
     background-color: #141721;
-    border: 1px solid #232836;
-    border-radius: 8px;
+    border: 1.5px solid #232836;
+    border-radius: 10px;
     padding: 14px;
 }
 QTableWidget {
     background-color: #141721;
-    border: 1px solid #232836;
-    border-radius: 8px;
+    border: 1.5px solid #232836;
+    border-radius: 10px;
     gridline-color: #252B3B;
     color: #F8FAFC;
+    font-size: 14px;
     selection-background-color: #0E2A38;
     selection-color: #00E5FA;
 }
@@ -138,9 +143,9 @@ QHeaderView::section {
     background-color: #1A1E2B;
     color: #94A3B8;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
-    padding: 8px;
+    padding: 10px 8px;
 }
 """
 
@@ -161,7 +166,7 @@ class RegistrationDialog(QDialog):
         self.captured_faces: List[np.ndarray] = []
 
         self.setWindowTitle("Đăng Ký Hồ Sơ Người Dùng Mới — Thông Tin Cá Nhân & Nhận Diện")
-        self.setMinimumSize(880, 560)
+        self.setMinimumSize(980, 640)
         self.setStyleSheet(DIALOG_STYLESHEET)
 
         self._init_ui()
@@ -173,17 +178,17 @@ class RegistrationDialog(QDialog):
 
     def _init_ui(self) -> None:
         main_layout = QVBoxLayout(self)
-        main_layout.setContentsMargins(22, 18, 22, 18)
-        main_layout.setSpacing(14)
+        main_layout.setContentsMargins(24, 20, 24, 20)
+        main_layout.setSpacing(16)
 
         # Header Title
         lbl_head = QLabel("➕ ĐĂNG KÝ HỒ SƠ NGƯỜI DÙNG / BỆNH NHÂN MỚI")
-        lbl_head.setStyleSheet("font-size: 18px; font-weight: 800; color: #00E5FA;")
+        lbl_head.setStyleSheet("font-size: 20px; font-weight: 800; color: #00E5FA;")
         lbl_desc = QLabel(
             "Vui lòng điền đầy đủ thông tin cá nhân bên dưới và chụp ít nhất 1 ảnh khuôn mặt mẫu. "
             "Dữ liệu sẽ được lưu vào cơ sở dữ liệu và huấn luyện mô hình nhận diện tự động."
         )
-        lbl_desc.setStyleSheet("font-size: 12px; color: #94A3B8;")
+        lbl_desc.setStyleSheet("font-size: 14px; color: #94A3B8;")
         main_layout.addWidget(lbl_head)
         main_layout.addWidget(lbl_desc)
 
@@ -211,7 +216,7 @@ class RegistrationDialog(QDialog):
         lbl_id.setStyleSheet("font-weight: 600; color: #CBD5E1;")
         self.edit_id = QLineEdit(next_id)
         self.edit_id.setPlaceholderText("VD: 001, 1...")
-        self.edit_id.setFixedWidth(120)
+        self.edit_id.setFixedWidth(140)
         grid.addWidget(lbl_id, 0, 0)
         grid.addWidget(self.edit_id, 0, 1)
 
@@ -229,7 +234,7 @@ class RegistrationDialog(QDialog):
         self.spin_age = QSpinBox()
         self.spin_age.setRange(1, 120)
         self.spin_age.setValue(70)
-        self.spin_age.setFixedWidth(120)
+        self.spin_age.setFixedWidth(140)
         grid.addWidget(lbl_age, 2, 0)
         grid.addWidget(self.spin_age, 2, 1)
 
@@ -238,7 +243,7 @@ class RegistrationDialog(QDialog):
         lbl_gender.setStyleSheet("font-weight: 600; color: #CBD5E1;")
         self.combo_gender = QComboBox()
         self.combo_gender.addItems(["Nam", "Nữ", "Khác"])
-        self.combo_gender.setFixedWidth(120)
+        self.combo_gender.setFixedWidth(140)
         grid.addWidget(lbl_gender, 3, 0)
         grid.addWidget(self.combo_gender, 3, 1)
 
@@ -252,7 +257,7 @@ class RegistrationDialog(QDialog):
 
         # 6. Thông tin Người Chăm Sóc / Người Thân (Bắt buộc Gmail để nhận cảnh báo ngã)
         lbl_cg_title = QLabel("👨‍👩‍👧 THÔNG TIN NGƯỜI CHĂM SÓC / NGƯỜI THÂN")
-        lbl_cg_title.setStyleSheet("font-size: 13px; font-weight: bold; color: #38BDF8; margin-top: 8px;")
+        lbl_cg_title.setStyleSheet("font-size: 14px; font-weight: bold; color: #38BDF8; margin-top: 8px;")
         grid.addWidget(lbl_cg_title, 5, 0, 1, 2)
 
         lbl_cg_name = QLabel("Họ tên người thân:")
@@ -290,7 +295,7 @@ class RegistrationDialog(QDialog):
         lay_form.addWidget(lbl_p_title)
 
         self.lbl_photo_status = QLabel("Chưa có ảnh mẫu nào. (Cần ít nhất 1 ảnh rõ mặt)")
-        self.lbl_photo_status.setStyleSheet("font-size: 12px; color: #F59E0B; font-weight: 600;")
+        self.lbl_photo_status.setStyleSheet("font-size: 14px; color: #F59E0B; font-weight: 600;")
         lay_form.addWidget(self.lbl_photo_status)
 
         # Thumbnails strip
@@ -334,22 +339,22 @@ class RegistrationDialog(QDialog):
 
         # Preview display
         self.preview_display = QLabel()
-        self.preview_display.setMinimumSize(360, 250)
+        self.preview_display.setMinimumSize(420, 290)
         self.preview_display.setAlignment(Qt.AlignCenter)
-        self.preview_display.setStyleSheet("background-color: #000000; border: 1px solid #232836; border-radius: 6px;")
+        self.preview_display.setStyleSheet("background-color: #000000; border: 1.5px solid #232836; border-radius: 8px;")
         lay_cam.addWidget(self.preview_display, 1)
 
         # Guiding Status
         self.lbl_guidance = QLabel("⚪ Đang kết nối luồng camera...")
         self.lbl_guidance.setStyleSheet(
-            "font-size: 12px; font-weight: bold; color: #00E5FA; "
-            "background-color: #121E24; padding: 6px 10px; border-radius: 4px;"
+            "font-size: 14px; font-weight: bold; color: #00E5FA; "
+            "background-color: #121E24; padding: 8px 12px; border-radius: 6px;"
         )
         lay_cam.addWidget(self.lbl_guidance)
 
         # Instructions note
         lbl_note = QLabel("💡 Lưu ý: Ngồi hoặc đứng thẳng cách camera 1.0m - 2.0m, đủ ánh sáng. Có thể chụp 2-3 góc mặt để nhận diện chuẩn nhất.")
-        lbl_note.setStyleSheet("font-size: 11px; color: #94A3B8; font-style: italic;")
+        lbl_note.setStyleSheet("font-size: 13px; color: #94A3B8;")
         lbl_note.setWordWrap(True)
         lay_cam.addWidget(lbl_note)
 
@@ -595,7 +600,7 @@ class PatientManagementDialog(QDialog):
         self.face_adapter = face_adapter
 
         self.setWindowTitle("Quản Lý Danh Sách Người Bệnh & Hồ Sơ")
-        self.setMinimumSize(820, 480)
+        self.setMinimumSize(980, 560)
         self.setStyleSheet(DIALOG_STYLESHEET)
 
         self._init_ui()
@@ -603,16 +608,16 @@ class PatientManagementDialog(QDialog):
 
     def _init_ui(self) -> None:
         main_layout = QVBoxLayout(self)
-        main_layout.setContentsMargins(20, 18, 20, 18)
-        main_layout.setSpacing(12)
+        main_layout.setContentsMargins(22, 20, 22, 20)
+        main_layout.setSpacing(14)
 
         # Header
         top_row = QHBoxLayout()
         v_title = QVBoxLayout()
         lbl_head = QLabel("👥 DANH SÁCH HỒ SƠ NGƯỜI BỆNH ĐÃ ĐĂNG KÝ")
-        lbl_head.setStyleSheet("font-size: 16px; font-weight: 800; color: #00E5FA;")
+        lbl_head.setStyleSheet("font-size: 18px; font-weight: 800; color: #00E5FA;")
         lbl_desc = QLabel("Xem danh sách thông tin cá nhân và dữ liệu nhận diện khuôn mặt trong hệ thống.")
-        lbl_desc.setStyleSheet("font-size: 12px; color: #94A3B8;")
+        lbl_desc.setStyleSheet("font-size: 14px; color: #94A3B8;")
         v_title.addWidget(lbl_head)
         v_title.addWidget(lbl_desc)
         top_row.addLayout(v_title)
@@ -637,6 +642,8 @@ class PatientManagementDialog(QDialog):
         self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeToContents)
         self.table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeToContents)
         self.table.horizontalHeader().setSectionResizeMode(6, QHeaderView.ResizeToContents)
+        self.table.verticalHeader().setDefaultSectionSize(40)
+        self.table.verticalHeader().setVisible(False)
         self.table.setSelectionBehavior(QTableWidget.SelectRows)
         self.table.setEditTriggers(QTableWidget.NoEditTriggers)
         main_layout.addWidget(self.table, 1)

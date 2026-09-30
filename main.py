@@ -33,8 +33,21 @@ def main() -> int:
     logger.info("Starting AI CARE & REHABILITATION SYSTEM (PyQt5)...")
     logger.info("Logging to: %s", LOG_FILE)
 
+    # Enable High-DPI scaling before QApplication is created
+    from PyQt5.QtCore import Qt
+    if hasattr(Qt, "AA_EnableHighDpiScaling"):
+        QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+    if hasattr(Qt, "AA_UseHighDpiPixmaps"):
+        QCoreApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+
     app = QApplication(sys.argv)
     app.setApplicationName("AI Care & Rehabilitation System")
+
+    # Set accessible base font for high readability
+    from PyQt5.QtGui import QFont
+    base_font = QFont("-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif")
+    base_font.setPointSize(11)
+    app.setFont(base_font)
 
     # Import DashboardWindow and STYLESHEET after QApplication is created
     from app.dashboard import DashboardWindow, STYLESHEET
