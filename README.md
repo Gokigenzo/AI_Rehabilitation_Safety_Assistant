@@ -1,7 +1,6 @@
 # AI REHABILITATION & SAFETY ASSISTANT
 ## Hệ Thống Trợ Lý Phục Hồi Chức Năng & Giám Sát An Toàn Thông Minh
 
-[![CI Build Windows EXE](https://github.com/Gokigenzo/AI_Rehabilitation_Safety_Assistant/actions/workflows/build_windows_exe.yml/badge.svg)](https://github.com/Gokigenzo/AI_Rehabilitation_Safety_Assistant/actions/workflows/build_windows_exe.yml)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![PyQt5](https://img.shields.io/badge/GUI-PyQt5-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
 [![MediaPipe](https://img.shields.io/badge/AI-MediaPipe%20Pose%20%26%20Mesh-orange.svg)](https://developers.google.com/mediapipe)
@@ -47,25 +46,35 @@ Dự án Nghiên cứu Khoa học Kỹ thuật: **Hệ thống Trí tuệ Nhân 
 
 ---
 
-## 🚀 HƯỚNG DẪN CÀI ĐẶT & CHẠY TRÊN LINUX
+## 🚀 HƯỚNG DẪN CÀI ĐẶT & KHỞI CHẠY (CROSS-PLATFORM)
 
-### 1. Chuẩn bị môi trường
+### 1. Chuẩn bị môi trường (Linux / Windows / macOS)
 ```bash
 git clone https://github.com/Gokigenzo/AI_Rehabilitation_Safety_Assistant.git
 cd AI_Rehabilitation_Safety_Assistant
 
 # Tạo môi trường ảo
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv            # Trên Linux / macOS
+# python -m venv .venv           # Trên Windows
+
+# Kích hoạt môi trường ảo
+source .venv/bin/activate        # Trên Linux / macOS
+# .venv\Scripts\activate         # Trên Windows
 
 # Cài đặt thư viện phụ thuộc
 pip install -r requirements.txt
 ```
 
 ### 2. Khởi chạy Ứng dụng Giao diện Chính (PyQt5)
-```bash
-PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python python main.py
-```
+- **Trên Linux / macOS:**
+  ```bash
+  PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python python main.py
+  ```
+- **Trên Windows (Command Prompt hoặc PowerShell):**
+  ```cmd
+  set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+  python main.py
+  ```
 
 ### 3. Chạy Kịch bản Mô phỏng Đầy đủ (Demo Walkthrough)
 ```bash
@@ -80,30 +89,6 @@ PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python python simulate_fall_alert.py
 ```bash
 QT_QPA_PLATFORM=offscreen PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python python -m unittest discover -s tests -p "test_*.py"
 ```
-
----
-
-## 🪟 HƯỚNG DẪN CHẠY VÀ ĐÓNG GÓI .EXE TRÊN WINDOWS
-
-Xem hướng dẫn chi tiết tại [HUONG_DAN_DONG_GOI_WINDOWS.md](HUONG_DAN_DONG_GOI_WINDOWS.md).
-
-### Cách 1: Khởi chạy 1-Click trên Windows
-Nhấp đúp vào tệp:
-```cmd
-Setup_and_Run_Windows.bat
-```
-Kịch bản sẽ tự động tạo môi trường, cài đặt thư viện và khởi chạy phần mềm.
-
-### Cách 2: Biên dịch thành tệp .exe độc lập
-1. Nhấp đúp vào:
-   ```cmd
-   build_windows_exe.bat
-   ```
-2. Ứng dụng thành phẩm sẽ nằm tại: `dist\AI_Rehab_Safety_Assistant\AI_Rehab_Safety_Assistant.exe`.
-3. Để tạo bộ cài đặt tự động duy nhất (`Setup_AI_Rehab_Safety_Assistant_v3.0.exe`), mở file [installer_setup.iss](installer_setup.iss) bằng **Inno Setup** và bấm **Compile** (`Ctrl + F9`).
-
-### Cách 3: Tải file .exe tự động qua GitHub Actions
-Vào tab [Actions](https://github.com/Gokigenzo/AI_Rehabilitation_Safety_Assistant/actions) của Repository, bấm **Run workflow** tại "Build Windows EXE & Installer". Máy ảo Windows của GitHub sẽ tự đóng gói và xuất file cài đặt để bạn tải về trực tiếp.
 
 ---
 
@@ -133,11 +118,6 @@ AI_Rehabilitation_Safety_Assistant/
 ├── services/                        # UserService, EmailService, FallMonitor, StateService
 ├── shared/                          # Shared State JSON & Baseline Cache
 ├── tests/                           # 37 Unit Tests (100% Pass)
-├── .github/workflows/               # GitHub Actions CI/CD Windows EXE Builder
-├── AI_Rehab_Safety_Assistant.spec   # PyInstaller spec for Windows compilation
-├── build_windows_exe.bat            # 1-Click Windows EXE Builder
-├── installer_setup.iss              # Inno Setup Script for single Setup.exe
-├── Setup_and_Run_Windows.bat        # 1-Click Windows Portable Launcher
 ├── main.py                          # Main GUI Entry Point
 ├── demo.py                          # Complete 6-Step Competition Walkthrough
 └── simulate_fall_alert.py           # Live Fall Alert Simulation Script
