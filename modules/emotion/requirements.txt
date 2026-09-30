@@ -1,0 +1,9 @@
+opencv-python
+mediapipe
+torch
+numpy
+pandas
+scikit-learn
+matplotlib
+joblib
+pytest

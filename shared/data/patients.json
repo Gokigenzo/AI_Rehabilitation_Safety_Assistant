@@ -1,0 +1,34 @@
+{
+  "user_test": {
+    "user_id": "user_test",
+    "patient_id": "user_test",
+    "name": "Nguyễn Văn A",
+    "age": 70,
+    "gender": "Nam",
+    "notes": "",
+    "caregiver": {
+      "name": "Nguyễn Văn B",
+      "relationship": "Người thân",
+      "email": "caregiver.test@gmail.com"
+    },
+    "registered_at": "2026-09-30T15:33:29.096278",
+    "last_updated": "2026-09-30T15:34:50.895906",
+    "image_count": 0
+  },
+  "user_123": {
+    "user_id": "user_123",
+    "patient_id": "user_123",
+    "name": "Cụ Nguyễn Thị Mai",
+    "age": 80,
+    "gender": "Nữ",
+    "notes": "Tiền sử huyết áp cao",
+    "caregiver": {
+      "name": "Nguyễn Văn Cường",
+      "relationship": "Con trai",
+      "email": "cuong.nguyen@gmail.com"
+    },
+    "registered_at": "2026-09-30T15:33:30.803610",
+    "last_updated": "2026-09-30T15:34:50.961737",
+    "image_count": 0
+  }
+}

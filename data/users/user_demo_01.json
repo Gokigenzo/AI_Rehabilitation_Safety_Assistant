@@ -1,0 +1,16 @@
+{
+  "user_id": "user_demo_01",
+  "patient_id": "user_demo_01",
+  "name": "Cụ Nguyễn Văn An",
+  "age": 76,
+  "gender": "Nam",
+  "notes": "",
+  "caregiver": {
+    "name": "Nguyễn Minh Đức",
+    "relationship": "Người thân",
+    "email": "caregiver.duc@gmail.com"
+  },
+  "registered_at": "2026-09-30T15:03:25.953286",
+  "last_updated": "2026-09-30T15:03:53.122068",
+  "image_count": 0
+}

@@ -1,0 +1,16 @@
+{
+  "user_id": "2",
+  "patient_id": "2",
+  "name": "Trần Văn Nam",
+  "age": 68,
+  "gender": "Nam",
+  "notes": "",
+  "caregiver": {
+    "name": "Người chăm sóc",
+    "relationship": "Người thân",
+    "email": ""
+  },
+  "registered_at": "2026-09-30T15:09:36.319809",
+  "last_updated": "2026-09-30T15:09:36.319839",
+  "image_count": 0
+}

@@ -1,0 +1,14 @@
+{
+  "patient_id": "patient_001",
+  "exercise": "sit_to_stand",
+  "exercise_name": "Đứng lên ngồi xuống (Sit-to-Stand)",
+  "target_reps": 10,
+  "repetitions": 0,
+  "correct_reps": 0,
+  "incorrect_reps": 0,
+  "stage": "sitting",
+  "score": 100.0,
+  "feedback": "Chuẩn bị vào tư thế",
+  "fps": 30.0,
+  "timestamp": "2026-09-30T15:34:53.119204"
+}

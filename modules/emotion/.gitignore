@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+data/expression_landmarks.csv
+data/splits.json
+# models/expression_net.pth (tracked for runtime)
+models/baseline_logistic_regression.joblib
+results/

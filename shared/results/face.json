@@ -1,0 +1,10 @@
+{
+  "patient_id": "unknown",
+  "name": "Người lạ",
+  "status": "unknown",
+  "confidence": 0.0,
+  "age": "60-70",
+  "gender": "Nam",
+  "timestamp": "2026-09-30T15:30:42.626139",
+  "mode": "recognize"
+}

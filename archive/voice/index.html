@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Voice Command Assistant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f3c88, #5879a6);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: -80px; /* Pulls content up over the header slightly */
+            animation: fadeUp 1s ease-out 0.2s both;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 35px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left; /* Ensure text inside cards stays neatly aligned left */
+        }
+
+        .card.center-aligned {
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid #ebedee;
+            padding-bottom: 10px;
+        }
+
+        .card.center-aligned h2 {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-top: 0;
+        }
+
+        ul {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #4a5568;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight text styling */
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #1f3c88, #2a52be);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(31, 60, 136, 0.3);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #162447, #1f3c88);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(31, 60, 136, 0.4);
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.95rem;
+            color: #718096;
+            background-color: transparent;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            header { padding: 50px 20px 80px; }
+            h1 { font-size: 2.2rem; }
+            .card { padding: 25px; }
+            .container { margin-top: -60px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎙 Elder Voice Command Assistant</h1>
+        <p>Offline Emergency-Enabled Voice Support for Elderly Care</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>About the Project</h2>
+                <p>
+                    The Elder Voice Command Assistant is an offline, voice-controlled system
+                    designed to assist elderly users with daily interactions and emergency
+                    situations. The system prioritizes reliability, simplicity, and safety independently of internet connectivity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Core Features</h2>
+                <ul>
+                    <li><strong>Offline operation:</strong> Uses the Vosk speech recognition engine for absolute privacy and reliability.</li>
+                    <li><strong>Emergency alert:</strong> Repeated voice warnings and popup alerts activated via phrase or button.</li>
+                    <li><strong>Medicine reminders:</strong> Set relative reminders for medication taking.</li>
+                    <li><strong>Elder-friendly Interface:</strong> Very simple Tkinter GUI logic limiting complex navigation.</li>
+                </ul>
+            </div>
+
+            <div class="card center-aligned">
+                <h2>Source Code</h2>
+                <p>Complete source code and documentation are available on GitHub.</p>
+                <a href="https://github.com/SiranjeeviE/Elder_Command_Assisstant" class="btn">View Repository</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Elder Command Assistant
+    </footer>
+</body>
+</html>

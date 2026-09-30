@@ -1,0 +1,11 @@
+{
+  "dominant_emotion": "Neutral",
+  "emotion_vi": "Bình thường",
+  "confidence": 0.92,
+  "probabilities": {
+    "Neutral": 0.92,
+    "Happy": 0.04,
+    "Sad": 0.04
+  },
+  "timestamp": "2026-09-30T15:34:52.841742"
+}

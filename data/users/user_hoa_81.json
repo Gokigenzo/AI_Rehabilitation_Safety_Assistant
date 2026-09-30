@@ -1,0 +1,16 @@
+{
+  "user_id": "user_hoa_81",
+  "patient_id": "user_hoa_81",
+  "name": "Cụ Bà Trần Thị Hoa",
+  "age": 81,
+  "gender": "Nữ",
+  "notes": "Tiền sử loãng xương, tụt huyết áp tư thế, dễ chóng mặt",
+  "caregiver": {
+    "name": "Anh Hoàng Tuấn",
+    "relationship": "Con trai trưởng",
+    "email": "tuan.hoang.caregiver@gmail.com"
+  },
+  "registered_at": "2026-09-30T15:18:29.512293",
+  "last_updated": "2026-09-30T15:21:52.010797",
+  "image_count": 0
+}

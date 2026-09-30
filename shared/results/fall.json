@@ -1,0 +1,22 @@
+{
+  "fall_state": "NORMAL",
+  "posture": "STANDING",
+  "posture_vi": "Đứng bình thường",
+  "confidence": 0.65,
+  "current_user_id": "1",
+  "current_user_name": "gokigenszo",
+  "caregiver_email": "lthpxb2007@gmail.com",
+  "last_fall_event": "Ngã lúc 15:24:57 (failed)",
+  "email_status": "Không thể gửi Gmail",
+  "last_event": {
+    "event_id": "fall_20260930_152457",
+    "user_id": "1",
+    "user_name": "gokigenszo",
+    "timestamp": "2026-09-30T15:24:57.560843",
+    "confidence": 1.0,
+    "snapshot_path": "/home/gokigenzo/Code/antigravity/AI_for_older/data/fall_events/fall_20260930_152457/snapshot.jpg",
+    "caregiver_email": "lthpxb2007@gmail.com",
+    "email_status": "failed",
+    "video_path": null
+  }
+}

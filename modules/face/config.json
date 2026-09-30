@@ -1,0 +1,40 @@
+{
+  "database": {
+    "path": "face_database.pkl",
+    "unknown_faces_dir": "unknown_faces",
+    "backup_enabled": true,
+    "backup_interval": 3600
+  },
+  "models": {
+    "face_detector": {
+      "proto": "models/opencv_face_detector.pbtxt",
+      "model": "models/opencv_face_detector_uint8.pb"
+    },
+    "age_detector": {
+      "proto": "models/age_deploy.prototxt",
+      "model": "models/age_net.caffemodel"
+    },
+    "gender_detector": {
+      "proto": "models/gender_deploy.prototxt",
+      "model": "models/gender_net.caffemodel"
+    }
+  },
+  "detection": {
+    "confidence_threshold": 0.7,
+    "padding": 20,
+    "face_size": [200, 200],
+    "recognition_threshold": 80
+  },
+  "ui": {
+    "window_name": "Face Recognition System",
+    "display_confidence": true,
+    "display_age_gender": true,
+    "save_frames_dir": "saved_frames"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "face_recognition.log",
+    "max_size": 10485760,
+    "backup_count": 5
+  }
+}

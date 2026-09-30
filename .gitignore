@@ -1,0 +1,43 @@
+# Virtual Environment
+.venv/
+.venv*/
+venv/
+env/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Sensitive environment variables
+.env
+.env.local
+.env.*.local
+
+# Build and Packaging artifacts
+build/
+dist/
+release_installer/
+*.spec.bak
+*.egg-info/
+
+# Logs and runtime temporary files
+logs/*.log
+logs/*
+!logs/.gitkeep
+
+# Runtime generated fall events & sessions
+data/fall_events/*
+!data/fall_events/.gitkeep
+data/sessions/*
+!data/sessions/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

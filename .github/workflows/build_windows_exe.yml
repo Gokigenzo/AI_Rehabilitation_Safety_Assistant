@@ -1,0 +1,63 @@
+name: Build Windows EXE & Installer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build Standalone Windows EXE with PyInstaller
+        env:
+          PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: python
+        run: |
+          pyinstaller --clean --noconfirm AI_Rehab_Safety_Assistant.spec
+
+      - name: Prepare Distribution Folders
+        run: |
+          if (!(Test-Path "dist\AI_Rehab_Safety_Assistant\data\users")) {
+            New-Item -ItemType Directory -Path "dist\AI_Rehab_Safety_Assistant\data\users" -Force
+            New-Item -ItemType Directory -Path "dist\AI_Rehab_Safety_Assistant\data\fall_events" -Force
+            New-Item -ItemType Directory -Path "dist\AI_Rehab_Safety_Assistant\data\sessions" -Force
+            New-Item -ItemType Directory -Path "dist\AI_Rehab_Safety_Assistant\logs" -Force
+          }
+          Copy-Item ".env.example" -Destination "dist\AI_Rehab_Safety_Assistant\.env" -Force
+
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress
+
+      - name: Compile Windows Installer (.exe Setup)
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer_setup.iss
+
+      - name: Upload Standalone App Bundle (.zip)
+        uses: actions/upload-artifact@v4
+        with:
+          name: AI_Rehab_Safety_Assistant_Portable_Windows
+          path: dist/AI_Rehab_Safety_Assistant
+
+      - name: Upload Self-Installing Setup.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: Setup_AI_Rehab_Safety_Assistant_v3.0
+          path: release_installer/*.exe

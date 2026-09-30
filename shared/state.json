@@ -1,0 +1,21 @@
+{
+  "patient_id": "1",
+  "name": "Trần Văn Nam",
+  "current_emotion": "Bình thường",
+  "emotion_confidence": 0.92,
+  "active_exercise": "sit_to_stand",
+  "exercise_stage": "sitting",
+  "repetitions": 0,
+  "correct_reps": 0,
+  "incorrect_reps": 0,
+  "score": 100.0,
+  "form_feedback": "Chuẩn bị vào tư thế",
+  "last_exercise": "Đứng lên ngồi xuống (Sit-to-Stand) (0 lần - 100.0%)",
+  "last_voice_command": "Dừng bài tập -> STOP_REHAB",
+  "last_update": "2026-09-30T15:34:53.120146",
+  "fall_state": "NORMAL",
+  "fall_confidence": 0.65,
+  "last_fall_event": "Ngã lúc 15:24:57 (failed)",
+  "caregiver_email": "lthpxb2007@gmail.com",
+  "email_status": "Không thể gửi Gmail"
+}

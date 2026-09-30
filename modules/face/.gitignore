@@ -1,0 +1,64 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.backup
+MANIFEST
+
+# Face Database
+/face_database.pkl
+/face_database.pkl.backup
+
+# Unknown faces directory
+unknown_faces/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Test files
+test_*.py
+tests/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+.env.local

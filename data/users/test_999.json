@@ -1,0 +1,16 @@
+{
+  "user_id": "test_999",
+  "patient_id": "test_999",
+  "name": "Người Thử Nghiệm",
+  "age": 72,
+  "gender": "Nam",
+  "notes": "Kiểm tra hệ thống đăng ký độc lập",
+  "caregiver": {
+    "name": "Người chăm sóc",
+    "relationship": "Người thân",
+    "email": ""
+  },
+  "registered_at": "2026-09-30T15:34:48.643411",
+  "last_updated": "2026-09-30T15:34:48.643434",
+  "image_count": 1
+}
